@@ -1,0 +1,121 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/HAMMAD/INTERNSHIP RESOLVE/PRN-CODE-GENERATOR-VERILOG
+vg1_lfsr
+!s110 1783797800
+!i10b 1
+!s100 :e=^;7SXDHhSIaof8YRAD1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ini9=o>R0kl^bnXBf^h27W2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1783795727
+8.\g1_lfsr.v
+F.\g1_lfsr.v
+!i122 1
+L0 1 44
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1783797800.000000
+!s107 .\g1_lfsr.v|
+!s90 .\g1_lfsr.v|
+!i113 1
+Z4 tCvgOpt 0
+vg2_lfsr
+!s110 1783797821
+!i10b 1
+!s100 n`:QoRmA[?NE2bbkiQRFz0
+R1
+I]zBCePl4VcNNP[LzP@2_V2
+R2
+R0
+Z5 w1782981245
+8.\g2_lfsr.v
+F.\g2_lfsr.v
+!i122 2
+Z6 L0 1 47
+R3
+r1
+!s85 0
+31
+!s108 1783797820.000000
+!s107 .\g2_lfsr.v|
+!s90 .\g2_lfsr.v|
+!i113 1
+R4
+vgps_ca_top
+!s110 1783797942
+!i10b 1
+!s100 ?lmn@79Y63P;U`XVh6dAN3
+R1
+I_<4T]_5L7VjoicL1YB83^1
+R2
+R0
+R5
+8.\gps_ca_top.v
+F.\gps_ca_top.v
+!i122 4
+R6
+R3
+r1
+!s85 0
+31
+!s108 1783797942.000000
+!s107 .\gps_ca_top.v|
+!s90 .\gps_ca_top.v|
+!i113 1
+R4
+vprn_selector
+!s110 1783797933
+!i10b 1
+!s100 Z@RDQMnOcSXT0b174@RTP3
+R1
+IT<z;h^IBfeNjC6zVYUADS1
+R2
+R0
+w1782980398
+8.\prn_selector.v
+F.\prn_selector.v
+!i122 3
+L0 1 37
+R3
+r1
+!s85 0
+31
+!s108 1783797932.000000
+!s107 .\prn_selector.v|
+!s90 .\prn_selector.v|
+!i113 1
+R4
+vtb_gps_ca
+!s110 1783798422
+!i10b 1
+!s100 5R]7>83QBFFOd=?QdO];i3
+R1
+IP7KP]6BXe?iWH8[TIJ:0A3
+R2
+R0
+w1783794966
+8.\tb_gps_ca.v
+F.\tb_gps_ca.v
+!i122 5
+L0 2 43
+R3
+r1
+!s85 0
+31
+!s108 1783798422.000000
+!s107 .\tb_gps_ca.v|
+!s90 .\tb_gps_ca.v|
+!i113 1
+R4

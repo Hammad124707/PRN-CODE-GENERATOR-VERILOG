@@ -1,0 +1,70 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000225d136bc10 .scope module, "g2_lfsr" "g2_lfsr" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /OUTPUT 1 "g2_out";
+    .port_info 3 /OUTPUT 10 "g2_state";
+L_00000225d1367100 .functor XOR 1, L_00000225d1273080, L_00000225d12736c0, C4<0>, C4<0>;
+L_00000225d1366ee0 .functor XOR 1, L_00000225d1367100, L_00000225d1273260, C4<0>, C4<0>;
+L_00000225d1273f90 .functor XOR 1, L_00000225d1366ee0, L_00000225d1273440, C4<0>, C4<0>;
+L_00000225d1274000 .functor XOR 1, L_00000225d1273f90, L_00000225d12733a0, C4<0>, C4<0>;
+L_00000225d1274070 .functor XOR 1, L_00000225d1274000, L_00000225d1273800, C4<0>, C4<0>;
+L_00000225d12740e0 .functor BUFZ 10, v00000225d1273300_0, C4<0000000000>, C4<0000000000>, C4<0000000000>;
+v00000225d1366cc0_0 .net *"_ivl_1", 0 0, L_00000225d1273080;  1 drivers
+v00000225d136bda0_0 .net *"_ivl_11", 0 0, L_00000225d1273440;  1 drivers
+v00000225d136be40_0 .net *"_ivl_12", 0 0, L_00000225d1273f90;  1 drivers
+v00000225d1273120_0 .net *"_ivl_15", 0 0, L_00000225d12733a0;  1 drivers
+v00000225d12734e0_0 .net *"_ivl_16", 0 0, L_00000225d1274000;  1 drivers
+v00000225d12738a0_0 .net *"_ivl_19", 0 0, L_00000225d1273800;  1 drivers
+v00000225d1272f40_0 .net *"_ivl_3", 0 0, L_00000225d12736c0;  1 drivers
+v00000225d1273b20_0 .net *"_ivl_4", 0 0, L_00000225d1367100;  1 drivers
+v00000225d1273bc0_0 .net *"_ivl_7", 0 0, L_00000225d1273260;  1 drivers
+v00000225d12731c0_0 .net *"_ivl_8", 0 0, L_00000225d1366ee0;  1 drivers
+o00000225d12771b8 .functor BUFZ 1, C4<z>; HiZ drive
+v00000225d1272fe0_0 .net "clk", 0 0, o00000225d12771b8;  0 drivers
+v00000225d1273620_0 .net "feedback", 0 0, L_00000225d1274070;  1 drivers
+v00000225d1273300_0 .var "g2", 9 0;
+v00000225d1273760_0 .net "g2_out", 0 0, L_00000225d12739e0;  1 drivers
+v00000225d1273580_0 .net "g2_state", 9 0, L_00000225d12740e0;  1 drivers
+o00000225d12772a8 .functor BUFZ 1, C4<z>; HiZ drive
+v00000225d1273940_0 .net "reset", 0 0, o00000225d12772a8;  0 drivers
+E_00000225d1275e80 .event posedge, v00000225d1273940_0, v00000225d1272fe0_0;
+L_00000225d1273080 .part v00000225d1273300_0, 9, 1;
+L_00000225d12736c0 .part v00000225d1273300_0, 8, 1;
+L_00000225d1273260 .part v00000225d1273300_0, 7, 1;
+L_00000225d1273440 .part v00000225d1273300_0, 5, 1;
+L_00000225d12733a0 .part v00000225d1273300_0, 2, 1;
+L_00000225d1273800 .part v00000225d1273300_0, 1, 1;
+L_00000225d12739e0 .part v00000225d1273300_0, 9, 1;
+    .scope S_00000225d136bc10;
+T_0 ;
+    %wait E_00000225d1275e80;
+    %load/vec4 v00000225d1273940_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 1023, 0, 10;
+    %assign/vec4 v00000225d1273300_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v00000225d1273620_0;
+    %load/vec4 v00000225d1273300_0;
+    %parti/s 9, 1, 2;
+    %concat/vec4; draw_concat_vec4
+    %assign/vec4 v00000225d1273300_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "g2_lfsr.v";

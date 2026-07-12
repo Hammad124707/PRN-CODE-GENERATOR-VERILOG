@@ -9,6 +9,9 @@ module tb_gps_ca_prn1_16;
     reg reset;
     reg [5:0] prn_select;
 
+    wire prn_code;
+    wire [9:0] g1_state;
+    wire [9:0] g2_state;
 
     integer i, p;
     reg [9:0] chip_capture;   // holds first 10 chips of the current PRN
@@ -19,8 +22,9 @@ module tb_gps_ca_prn1_16;
         .clk(clk),
         .reset(reset),
         .prn_select(prn_select),
-        .prn_code(prn_code)
-        
+        .prn_code(prn_code),
+        .g1_state(g1_state),
+        .g2_state(g2_state)
     );
 
     // Clock generator
@@ -48,8 +52,8 @@ module tb_gps_ca_prn1_16;
                 #1;                         // Let outputs settle after edge
             end
 
-            $display("PRN%0d : chips = %b  (octal %o) ",
-                       code_num, chip_capture, chip_capture);
+            $display("PRN%0d : chips = %b  (octal %o)  g1=%b g2=%b",
+                       code_num, chip_capture, chip_capture, g1_state, g2_state);
         end
     endtask
 

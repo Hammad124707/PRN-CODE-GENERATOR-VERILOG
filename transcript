@@ -1,0 +1,7 @@
+# vsim work.tb_gps_ca.v 
+# Start time: 00:32:41 on Jul 12,2026
+# ** Error (suppressible): (vsim-19) Failed to access library 'work.tb_gps_ca' at "work.tb_gps_ca".
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# End time: 00:32:42 on Jul 12,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
