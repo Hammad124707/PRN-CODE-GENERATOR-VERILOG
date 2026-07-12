@@ -3,12 +3,13 @@ module g1_lfsr(input clk, input reset, output g1_output);
 reg [9:0] g1 ;
 wire feedback ;
 assign feedback = g1[2] ^ g1[9] ;
+assign g1_output = g1[9] ;
 always@(posedge clk , posedge reset) 
 begin 
 	if(reset)
 		g1 <= 10'b1111111111;
 	else
-		g1 <= {feedback,g1[8:0]};
+		g1 <= {g1[8:0],feedback};
 end
 endmodule 
 
