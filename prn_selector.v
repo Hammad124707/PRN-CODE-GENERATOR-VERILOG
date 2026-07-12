@@ -1,6 +1,6 @@
 module prn_selector(
 
-    input  [5:0] prn_select,
+    input  [4:0] prn_select,
     input  [9:0] g2_state,
 
     output reg g2_selected
