@@ -1,44 +1,14 @@
-module g1_lfsr(
+//writing my own code
+module g1_lfsr(input clk, input reset, output g1_output);
+reg [9:0] g1 ;
+wire feedback ;
+assign feedback = g1[2] ^ g1[9] ;
+always@(posedge clk , posedge reset) 
+begin 
+	if(reset)
+		g1 <= 10'b1111111111;
+	else
+		g1 <= {feedback,g1[8:0]};
+end
+endmodule 
 
-    input clk,
-    input reset,
-
-    output wire g1_out
-   
-
-);
-
-	// 10-bit Shift Register
-
-	reg [9:0] g1;
-
-	// Feedback Calculation
-	// Polynomial: x^10 + x^3 + 1
-
-	wire feedback;
-
-	assign feedback = g1[9] ^ g1[2];
-
-	// Output
-
-	assign g1_out = g1[9];
-
-	
-
-	// Shift Register
-
-	always @(posedge clk or posedge reset)
-
-		begin
-
-		    if(reset)
-
-		        g1 <= 10'b1111111111;
-
-		    else
-
-		        g1 <= {feedback, g1[9:1]};
-
-	end
-
-endmodule
