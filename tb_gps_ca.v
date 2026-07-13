@@ -12,7 +12,7 @@ module tb_gps_ca_prn1_16;
 
     integer i, p;
     reg [9:0] chip_capture;   // holds first 10 chips of the current PRN
-    reg [9:0] prn5_capture;   // saved so later PRNs can be sanity-checked
+     // saved so later PRNs can be sanity-checked
 
     // Instantiate DUT
     gps_ca_top DUT (
