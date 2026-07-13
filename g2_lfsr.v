@@ -11,7 +11,7 @@ begin
 	if(reset)
 		g2 <= 10'b1111111111;
 	else 
-		g2 <= {feedback, g2[8:0]};
+		g2 <= { g2[8:0],feedback};
 end
 endmodule
 	
